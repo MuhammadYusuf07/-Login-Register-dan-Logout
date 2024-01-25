@@ -1,4 +1,4 @@
-package com.example.login_register_dan_logout
+package com.yusuf.login_register_dan_logout
 
 import io.flutter.embedding.android.FlutterActivity
 
