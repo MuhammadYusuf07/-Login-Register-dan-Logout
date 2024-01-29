@@ -1,12 +1,13 @@
+
 import 'package:flutter/material.dart';
 import 'package:login_register_dan_logout/core.dart';
-import '../controller/login_controller.dart';
+import '../controller/register_controller.dart';
 
-class LoginView extends StatefulWidget {
-  LoginView({Key? key}) : super(key: key);
+class RegisterView extends StatefulWidget {
+  const RegisterView({Key? key}) : super(key: key);
 
-  Widget build(context, LoginController controller) {
-    controller.view = this;
+  Widget build(context, RegisterController controller) {
+  controller.view = this;
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 172, 206, 221),
       body: Container(
@@ -19,7 +20,7 @@ class LoginView extends StatefulWidget {
                 padding: EdgeInsets.all(20.0),
                 child: Column(
                   children: [
-                    Text("Login",
+                    Text("Register",
                     style: TextStyle(
                     fontSize: 30.0,
                     ),
@@ -72,18 +73,11 @@ class LoginView extends StatefulWidget {
               width: MediaQuery.of(context).size.width,
               height: 46,
               child: ElevatedButton(
-                onPressed: () => controller.login(),
-                child: Text("Login"),
-              ),
-            ),
-            SizedBox(
-              width: MediaQuery.of(context).size.width,
-              height: 46,
-              child: ElevatedButton(
-                onPressed: () =>Get.to( RegisterView()),
+                onPressed: () => controller.register(),
                 child: Text("Register"),
               ),
             ),
+            
                   ],
                 ),
               ),
@@ -95,5 +89,6 @@ class LoginView extends StatefulWidget {
   }
 
   @override
-  State<LoginView> createState() => LoginController();
+  State<RegisterView> createState() => RegisterController();
 }
+    
