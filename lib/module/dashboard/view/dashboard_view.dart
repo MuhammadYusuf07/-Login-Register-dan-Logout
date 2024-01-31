@@ -15,7 +15,7 @@ class DashboardView extends StatefulWidget {
       ),
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.all(10.0),
+          padding: EdgeInsets.all(18.0),
           child: Column(
             children: [
               Container(
